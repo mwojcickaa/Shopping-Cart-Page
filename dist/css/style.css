@@ -1,5 +1,6 @@
-body {
-  background-color: green;
+tbody, th, tr, td {
+  border: 1px solid black;
+  padding: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
