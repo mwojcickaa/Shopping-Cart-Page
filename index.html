@@ -5,98 +5,183 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dist/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Raleway&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
     <title>Shopping Cart Page</title>
 </head>
 
 <body>
-    <header>
-        <img src="./src/img/logo.png">
+    <header class="header">
+        <img class="header__logo" src="./src/img/logo.png">
     </header>
-    <table style="width:100%">
-        <thead class="iformation-bar">
-            <tr>
-                <th colspan="2" class="information-bar__item">Product</th>
-                <th colspan="2" class="information-bar__item">Quantity</th>
-                <th class="information-bar__item">Subtotal</th>
+    <table class="table">
+        <thead>
+            <tr class="row--header row">
+                <th colspan="2" class="cell">
+                    <div class="cell-product--header">
+                        Product
+                    </div>
+                </th>
+                <th colspan="2" class="cell">
+                    <div class="cell-quantity--header">
+                        Quantity
+                    </div>
+                </th>
+                <th class="cell">
+                    <div class="cell-subtotal--header">
+                        Subtotal
+                    </div>
+                </th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td rowspan="3">
-                    "img"
+            <tr class="row">
+                <td class="cell-product" rowspan="3">
+                    <img class="cell__img img" src="./src/img/product-thirst-top.jpg">
                 </td>
-                <td>Red Printed T-Shirt</td>
-                <td rowspan="3" colspan="2">1</td>
-                <td rowspan="3"></td>
-            </tr>
-            <tr>
-                <td>Red Printed T-Shirt</td>
-            </tr>
-            <tr>
-                <td>Red Printed T-Shirt</td>
-            </tr>
-            <tr>
-                <td rowspan="3">
-                    "img"
+                <td class="cell-product-details title">
+                    <div class="cell-product-details__title">
+                        Cropped t-shirt
+                    </div>
                 </td>
-                <td>Red Printed T-Shirt</td>
-                <td rowspan="3" colspan="2">1</td>
-                <td rowspan="3"></td>
-            </tr>
-            <tr>
-                <td>Red Printed T-Shirt</td>
-            </tr>
-            <tr>
-                <td>Red Printed T-Shirt</td>
-            </tr>
-            <tr>
-                <td rowspan="3">
-                    "img"
+                <td class="cell-quantity" rowspan="3" colspan="2">1
                 </td>
-                <td>Red Printed T-Shirt</td>
-                <td rowspan="3" colspan="2">1</td>
-                <td rowspan="3"></td>
+                <td class="cell-subtotal" rowspan="3">
+                    <div class="cell-subtotal__text">$9.99</div>
+                </td>
             </tr>
-            <tr>
-                <td>Red Printed T-Shirt</td>
+            <tr class="row">
+                <td class="cell-product-details">
+                    <div class="cell-product-details__price">
+                        Price: $9.99
+                    </div>
+                </td>
             </tr>
-            <tr>
-                <td>Red Printed T-Shirt</td>
+            <tr class="row">
+                <td class="cell-product-details remove">
+                    <button class="cell-product-details__remove">
+                        Remove
+                    </button>
+                </td>
+            </tr>
+            <tr class="row">
+                <td class="cell-product" rowspan="3">
+                    <img class="cell__img img" src="./src/img/product-trousers-jeans.jpg">
+                </td>
+                <td class="cell-product-details title">
+                    <div class="cell-product-details__title">
+                        High waist denim shorts blue
+                    </div>
+                </td>
+                <td class="cell-quantity" rowspan="3" colspan="2">
+                    <div class="">1</div>
+                </td>
+                <td class="cell-subtotal" rowspan="3">
+                    <div class="cell-subtotal__text">$30.00</div>
+                </td>
+            </tr>
+            <tr class="row">
+                <td class="cell-product-details">
+                    <div class="cell-product-details__price">
+                        Price: $30.00
+                    </div>
+                </td>
+            </tr>
+            <tr class="row">
+                <td class="cell-product-details remove">
+                    <button class="cell-product-details__remove">
+                        Remove
+                    </button>
+                </td>
+            </tr>
+            <tr class="row">
+                <td class="cell-product" rowspan="3">
+                    <img class="cell__img img" src="./src/img/product-shoes-sandals.jpg">
+                </td>
+                <td class="cell-product-details title">
+                    <div class="cell-product-details__title">
+                        Flat cork sandals
+                    </div>
+                </td>
+                <td class="cell-quantity" rowspan="3" colspan="2">
+                    <div class="">1</div>
+                </td>
+                <td class="cell-subtotal" rowspan="3">
+                    <div class="cell-subtotal__text">$28.00</div>
+                </td>
+            </tr>
+            <tr class="row">
+                <td class="cell-product-details"">
+                    <div class="cell-product-details__price">
+                        Price: $28.00
+                    </div>
+                </td>
+            </tr>
+            <tr class="row">
+                <td class="cell-product-details remove">
+                    <button class="cell-product-details__remove">
+                        Remove
+                    </button>
+                </td>
             </tr>
         </tbody>
         <tfoot>
-            <tr>
-                <td colspan="3"></td>
-                <td colspan="2"></td>
+            <tr class="row">
+                <td class="cell" colspan="3">
+                </td>
+                <td class="cell" colspan="2">
+                    <div class="cell__line"></div>
+                </td>
             </tr>
-            <tr>
-                <td colspan="2"></td>
-                <td></td>
-                <td>Subtotal</td>
-                <td>$200.00</td>
+            <tr class="row">
+                <td class="cell" colspan="2">
+                </td>
+                <td class="cell">
+                </td>
+                <td class="cell-label">
+                    <div class="cell-label__text">Subtotal</div>
+                </td>
+                <td class="cell-subtotal">
+                    <div class="cell-subtotal__text">$67.99</div>
+                </td>
             </tr>
-            <tr>
-                <td colspan="2"></td>
-                <td></td>
-                <td>Tax</td>
-                <td>$35.00</td>
+            <tr class="row">
+                <td class="cell" colspan="2">
+                </td>
+                <td class="cell">
+                </td>
+                <td class="cell-label">
+                    <div class="cell-label__text">Tax</div>
+                </td>
+                <td class="cell-subtotal">
+                    <div class="cell-subtotal__text">$20.00</div>
+                </td>
             </tr>
-            <tr>
-                <td colspan="2"></td>
-                <td></td>
-                <td>Total</td>
-                <td>$235.00</td>
+            <tr class="row">
+                <td class="cell" colspan="2">
+                </td>
+                <td class="cell">
+                </td>
+                <td class="cell-label">
+                    <div class="cell-label__text">Total</div>
+                </td>
+                <td class="cell-subtotal">
+                    <div class="cell-subtotal__text">$87.99</div>
+                </td>
             </tr>
-            <tr>
-                <td colspan="3"></td>
-                <td colspan="2"></td>
+            <tr class="row">
+                <td class="cell" colspan="3">
+                </td>
+                <td class="cell" colspan="2">
+                    <button class="cell__button">Proceed to checkout</button>
+                </td>
             </tr>
         </tfoot>
-        </main>
-        <footer class="footer">
-            <h5 class="footer__title"></h5>
-        </footer>
-        <script src="dist/app.js"></script>
+    </table>
+    <footer class="footer">
+        <h4 class="footer__text">© 2023 Created by Martyna Wójcicka</h4>
+    </footer>
+    <script src="dist/app.js"></script>
 </body>
 
 </html>
