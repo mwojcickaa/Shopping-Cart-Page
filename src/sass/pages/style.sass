@@ -1,0 +1,172 @@
+@import '../sass-utils/variables.sass'
+
+html
+    height: 100%
+    position: relative
+
+    body
+        margin: 0
+        font-family: $font-roboto
+
+        .header
+            display: flex
+            justify-content: center
+
+            &__logo
+                width: 15%
+                margin: 20px 0 50px 0
+
+        .table
+            width: 70%
+            margin: auto
+            border-spacing: 0
+
+            .row
+                &--header
+                    background-color: $header-bgcolor
+                    height: 35px
+
+                .cell
+                    &-product
+                        text-align: left
+                        width: 150px
+
+                        &--header
+                            text-align: left
+                            color: $header-font-color
+                            margin-left: 15px
+                            font-size: 16px
+
+                        &-details
+                            width: 350px
+
+                            &__title
+                                font-size: 18px
+                                margin-left: 10px
+
+                            &.title
+                                vertical-align: bottom
+
+                            &__price
+                                font-size: 15px
+                                margin-left: 10px
+
+                            &__remove
+                                font-size: 15px
+                                margin-left: 10px
+                                color: $remove-item
+                                vertical-align: top
+                                background-color: transparent
+                                border: none
+                                cursor: pointer
+                                padding: 0
+
+                            &.remove
+                                vertical-align: top
+
+                    &-quantity
+                        text-align: center
+                        width: 150px
+
+                        &--header
+                            text-align: center
+                            color: $header-font-color
+                            font-size: 16px
+
+                        &-input
+                            width: 110px
+                            height: 30px
+                            display: flex
+                            border-radius: 30px
+                            margin: auto
+
+                            *
+                                border: none
+                                width: 40px
+                                flex: 1
+
+                            input[type="number"]::-webkit-inner-spin-button,
+                            input[type="number"]::-webkit-outer-spin-button
+                                -webkit-appearance: none
+                                appearance: none
+                                margin: 0
+
+                            input[type="number"]
+                                text-align: center
+                                background-color: #F0F0F0
+                                font-family: $font-roboto
+
+                            &__button
+                                font-family: $font-roboto
+                                cursor: pointer
+                                border-radius: 50% 0 0 50%
+
+                                &--minus
+                                    border-radius: 50% 0 0 50%
+
+                                &--plus
+                                    border-radius: 0 50% 50% 0
+
+                    &-subtotal
+                        text-align: right
+                        width: 160px
+
+                        &--header
+                            text-align: right
+                            color: $header-font-color
+                            font-size: 16px
+                            margin-right: 15px
+
+                        &__text
+                            font-weight: $semibold-weight
+                            margin: 7px 10px 7px 0
+
+                    &__line
+                        width: 500px
+                        height: 5px
+                        background-color: $header-bgcolor
+                        margin-bottom: 10px
+                        float: right
+
+                    &-label
+                        text-align: left
+
+                        &__text
+                            font-weight: $semibold-weight
+                            margin: 7px 0 7px 0
+                            position: relative
+                            left: 51%
+
+                    &__button
+                        width: 290px
+                        height: 40px
+                        float: right
+                        margin-top: 15px
+                        border-radius: 25px
+                        border: none
+                        background-color: $header-bgcolor
+                        color: $header-font-color
+                        font-weight: 500
+                        letter-spacing: 0.5px
+                        cursor: pointer
+
+        .img
+            width: 130px
+            height: 130px
+            margin: 10px 0 0 10px
+
+        .footer
+            background-color: #2F4858
+            clear: both
+            position: absolute
+            height: 90px
+            width: 100%
+            bottom: 0
+            display: flex
+            justify-content: center
+
+            &__text
+                color: #fff
+                letter-spacing: 1px
+                font-size: 13px
+                line-height: 55px

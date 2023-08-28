@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile": "tsc --watch",
-    "node-sass": "sass -w src/scss/:dist/css/"
+    "build": "sass src/sass/style.sass:dist/css/style.css && tsc",
+    "tsc": "tsc -w",
+    "sass": "sass -w src/sass/style.sass:dist/css/style.css"
   },
   "keywords": [],
   "author": "",
