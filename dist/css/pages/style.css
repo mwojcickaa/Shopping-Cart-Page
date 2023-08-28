@@ -70,6 +70,40 @@ html body .table .row .cell-quantity--header {
   color: #fff;
   font-size: 16px;
 }
+html body .table .row .cell-quantity-input {
+  width: 110px;
+  height: 30px;
+  display: flex;
+  border-radius: 30px;
+  margin: auto;
+}
+html body .table .row .cell-quantity-input input[type=number]::-webkit-inner-spin-button,
+html body .table .row .cell-quantity-input input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+html body .table .row .cell-quantity-input input[type=number] {
+  text-align: center;
+  background-color: #F0F0F0;
+  font-family: Roboto;
+}
+html body .table .row .cell-quantity-input__button {
+  font-family: Roboto;
+  cursor: pointer;
+  border-radius: 50% 0 0 50%;
+}
+html body .table .row .cell-quantity-input__button--minus {
+  border-radius: 50% 0 0 50%;
+}
+html body .table .row .cell-quantity-input__button--plus {
+  border-radius: 0 50% 50% 0;
+}
+html body .table .row .cell-quantity-input * {
+  border: none;
+  width: 40px;
+  flex: 1;
+}
 html body .table .row .cell-subtotal {
   text-align: right;
   width: 160px;

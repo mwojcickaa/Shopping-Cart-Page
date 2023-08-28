@@ -7,7 +7,7 @@ html {
     body {
 
         margin: 0;
-        font-family: Roboto;
+        font-family: $font-roboto;
 
         .header {
             display: flex;
@@ -85,6 +85,48 @@ html {
                             text-align: center;
                             color: $header-font-color;
                             font-size: 16px;
+                        }
+
+                        &-input {
+                            width: 110px;
+                            height: 30px;
+                            display: flex;
+                            border-radius: 30px;
+
+                            margin: auto;
+
+                            input[type="number"]::-webkit-inner-spin-button,
+                            input[type="number"]::-webkit-outer-spin-button {
+                                -webkit-appearance: none;
+                                appearance: none;
+                                margin: 0;
+                            }
+
+                            input[type="number"] {
+                                text-align: center;
+                                background-color: #F0F0F0;
+                                font-family: $font-roboto;
+                            }
+
+                            &__button {
+                                font-family: $font-roboto;
+
+                                cursor: pointer;
+                                border-radius: 50% 0 0 50%;
+                                &--minus {
+                                    border-radius: 50% 0 0 50%;
+                                }
+
+                                &--plus {
+                                    border-radius: 0 50% 50% 0;
+                                }
+                            }
+                        }
+
+                        &-input * {
+                            border: none;
+                            width: 40px;
+                            flex: 1;
                         }
                     }
 
