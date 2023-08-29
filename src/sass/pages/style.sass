@@ -1,21 +1,7 @@
 @import '../sass-utils/variables.sass'
 
 html
-    height: 100%
-    position: relative
-
     body
-        margin: 0
-        font-family: $font-roboto
-
-        .header
-            display: flex
-            justify-content: center
-
-            &__logo
-                width: 15%
-                margin: 20px 0 50px 0
-
         .table
             width: 70%
             margin: auto
@@ -23,7 +9,7 @@ html
 
             .row
                 &--header
-                    background-color: $header-bgcolor
+                    background-color: $red-color
                     height: 35px
 
                 .cell
@@ -33,7 +19,7 @@ html
 
                         &--header
                             text-align: left
-                            color: $header-font-color
+                            color: $white-font
                             margin-left: 15px
                             font-size: 16px
 
@@ -54,7 +40,7 @@ html
                             &__remove
                                 font-size: 15px
                                 margin-left: 10px
-                                color: $remove-item
+                                color: $red-color
                                 vertical-align: top
                                 background-color: transparent
                                 border: none
@@ -70,7 +56,7 @@ html
 
                         &--header
                             text-align: center
-                            color: $header-font-color
+                            color: $white-font
                             font-size: 16px
 
                         &-input
@@ -93,7 +79,7 @@ html
 
                             input[type="number"]
                                 text-align: center
-                                background-color: #F0F0F0
+                                background-color: $input-color
                                 font-family: $font-roboto
 
                             &__button
@@ -113,7 +99,7 @@ html
 
                         &--header
                             text-align: right
-                            color: $header-font-color
+                            color: $white-font
                             font-size: 16px
                             margin-right: 15px
 
@@ -124,7 +110,7 @@ html
                     &__line
                         width: 500px
                         height: 5px
-                        background-color: $header-bgcolor
+                        background-color: $red-color
                         margin-bottom: 10px
                         float: right
 
@@ -144,8 +130,8 @@ html
                         margin-top: 15px
                         border-radius: 25px
                         border: none
-                        background-color: $header-bgcolor
-                        color: $header-font-color
+                        background-color: $red-color
+                        color: $white-font
                         font-weight: 500
                         letter-spacing: 0.5px
                         cursor: pointer
@@ -154,19 +140,3 @@ html
             width: 130px
             height: 130px
             margin: 10px 0 0 10px
-
-        .footer
-            background-color: #2F4858
-            clear: both
-            position: absolute
-            height: 90px
-            width: 100%
-            bottom: 0
-            display: flex
-            justify-content: center
-
-            &__text
-                color: #fff
-                letter-spacing: 1px
-                font-size: 13px
-                line-height: 55px
