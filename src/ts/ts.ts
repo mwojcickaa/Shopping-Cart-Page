@@ -10,7 +10,7 @@ for (let i = 0; i < 3; i++) {
     buttonIncrement.addEventListener("click", () => {
         if (valueInput.value == "1") {
             buttonDecrement.disabled = false;
-        } else if (valueInput.value == "19") {
+        } else if (valueInput.value == "4") {
             buttonIncrement.disabled = true;
         }
         valueInput.value = String(parseInt(valueInput.value) + 1);
@@ -19,16 +19,35 @@ for (let i = 0; i < 3; i++) {
     buttonDecrement.addEventListener("click", () => {
         if (valueInput.value == "2") {
             buttonDecrement.disabled = true;
-        } else if (valueInput.value == "20") {
+        } else if (valueInput.value == "5") {
             buttonIncrement.disabled = false;
         }
         valueInput.value = String(parseInt(valueInput.value) - 1);
     })
+
+    valueInput.addEventListener("input", () => {
+        let convertedNumberInput = Number(valueInput.value)
+
+        if (valueInput.value == "") {
+            valueInput.style.backgroundColor = "rgba(255, 0, 0, 0.1)"
+            valueInput.style.borderRadius = "3px"
+            return;
+        } else if (convertedNumberInput < 1) {
+            valueInput.value = "1"
+            buttonIncrement.disabled = false;
+            buttonDecrement.disabled = true;
+            valueInput.style.backgroundColor = "#F0F0F0"
+        } else if (convertedNumberInput >= 5) {
+            valueInput.value = "5"
+            buttonIncrement.disabled = true;
+            buttonDecrement.disabled = false;
+            valueInput.style.backgroundColor = "#F0F0F0"
+        } else if (convertedNumberInput > 1 && convertedNumberInput < 5) {
+            buttonIncrement.disabled = false;
+            buttonDecrement.disabled = false;
+            valueInput.style.backgroundColor = "#F0F0F0"
+        }
+    })
 };
-
-
-
-
-
 
 
