@@ -178,7 +178,6 @@ function insertItemsFromArr() {
             findId.quantity = Number(valueInput.value);
             calculateSubtotal(parameters)
         });
-        console.log(findId.quantity)
     };
 };
 
