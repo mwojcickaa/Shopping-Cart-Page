@@ -98,6 +98,7 @@ function insertItemsFromArr() {
             arr.splice(parameters, 1)
 
             if (arr.length == 0) {
+                buttonBuy.disabled = true;
                 tbody.innerHTML = "";
                 calculateTotalOrder()
                 tbody.insertAdjacentHTML("beforeend", `
