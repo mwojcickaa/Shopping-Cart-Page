@@ -34,11 +34,7 @@ let quantityArr = [
     }
 ];
 
-let loading = "Loading";
-
 let tbody = document.querySelector("tbody");
-
-let body = document.querySelector("body");
 
 function insertItemsFromArr() {
     tbody.innerHTML = "";
