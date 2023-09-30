@@ -1,12 +1,15 @@
 html
     body
         main
-            min-height: calc(100% - 240px)
+            min-height: calc(100% - 220px)
 
             .table
                 width: 70%
                 margin: auto
                 border-spacing: 0
+
+                .empty-cart
+                    height: 350px
 
                 .row
                     &--header
@@ -29,14 +32,14 @@ html
 
                                 &__title
                                     font-size: 18px
-                                    margin-left: 0
+                                    margin-left: 5px
 
                                 &.title
                                     vertical-align: bottom
 
                                 &__price
                                     font-size: 15px
-                                    margin-left: 0
+                                    margin-left: 5px
 
                                 &__remove
                                     font-size: 15px
@@ -47,6 +50,7 @@ html
                                     border: none
                                     cursor: pointer
                                     padding: 0
+                                    margin-left: 5px
 
                                 &.remove
                                     vertical-align: top
@@ -87,8 +91,7 @@ html
                                         outline: none
 
                                     &.empty-input
-                                        background-color: rgba(255, 0, 0, 0.2)
-                                        border-radius: 3px
+                                        background-color: $empty-input
 
                                 &__button
                                     font-family: $font-roboto
@@ -121,7 +124,7 @@ html
                                 margin: 7px 10px 7px 0
 
                         &__line
-                            width: 525px
+                            width: calc((100% / 2) + 87px)
                             height: 5px
                             background-color: $red-color
                             margin-bottom: 10px
@@ -172,18 +175,19 @@ html
                 text-align: center
                 border-radius: 5px
                 padding: 14px
-                position: fixed
                 z-index: 1
                 left: 20px
-                bottom: 0
-                position: relative
+                margin-bottom: 10px
+                position: absolute
 
             .show
                 visibility: visible !important
                 -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s
                 animation: fadein 0.5s, fadeout 0.5s 2.5s
                 font-size: 17px
-                position: sticky
+                position: absolute
+                top: 10px
+                left: 20px
 
             @keyframes fadein
                 from
@@ -200,3 +204,399 @@ html
                 to
                     left: 0
                     opacity: 0
+
+@media (max-width: 1400px)
+    html
+        body
+            main
+                min-height: calc(100% - 210px)
+                .table
+                    width: 80%
+                    .row
+                        .cell
+                            &-product
+                                &-details
+                                    &__title
+                                        font-size: 16px
+
+                                    &__price
+                                        font-size: 13px
+
+                                    &__remove
+                                        font-size: 12px
+
+                            &__button
+                                width: 260px
+                                height: 40px
+                                font-size: 12px
+
+                .img
+                    width: 110px
+                    height: 110px
+
+@media (max-width: 1200px)
+    html
+        body
+            main
+                min-height: calc(100% - 170px)
+                .table
+                    width: 85%
+
+                    h3
+                        font-size: 14px
+
+                    .row
+                        &--header
+                            height: 30px
+
+                        .cell
+                            &-product
+                                &--header
+                                    font-size: 15px
+                                &-details
+                                    &__title
+                                        font-size: 15px
+
+                            &-quantity
+                                &--header
+                                    font-size: 15px
+                                &-input
+                                    width: 90px
+                                    height: 24px
+
+                                    input[type="number"]
+                                        font-size: 11px
+
+                                    &__button
+                                        font-size: 10px
+
+                            &-subtotal
+                                &__text
+                                    font-size: 15px
+                                &--header
+                                    font-size: 15px
+
+                            &-label
+                                &__text
+                                    font-size: 15px
+
+                            &__button
+                                width: 220px
+                                height: 35px
+                                font-size: 11px
+
+                .snackbar
+                    width: 240px
+                    height: 33px
+                    font-size: 12px
+
+@media (max-width: 992px)
+    html
+        body
+            main
+                .table
+                    h3
+                        font-size: 12px
+
+                    .empty-cart
+                        height: 200px
+
+                    .row
+                        &--header
+                            height: 27px
+
+                        .cell
+                            &-product
+                                &--header
+                                    font-size: 13px
+
+                                &-details
+                                    &__title
+                                        font-size: 13px
+
+                                    &__price
+                                        font-size: 12px
+
+                                    &__remove
+                                        font-size: 11px
+                            &-quantity
+                                &--header
+                                    font-size: 13px
+
+                                &-input
+                                    width: 85px
+                                    height: 22px
+
+                                input[type="number"]
+                                    font-size: 10px
+
+                            &-subtotal
+                                &--header
+                                    font-size: 13px
+
+                                &__text
+                                    font-size: 13px
+
+                            &__line
+                                height: 4px
+
+                            &-label
+                                &__text
+                                    font-size: 13px
+
+                            &__button
+                                width: 190px
+                                height: 32px
+                                font-size: 11px
+
+                .img
+                    width: 95px
+                    height: 95px
+                    margin: 5px 0 5px 0
+
+                .snackbar
+                    width: 210px
+                    height: 28px
+                    font-size: 11px
+                    left: 10px
+
+                @keyframes fadein
+                    from
+                        left: 0
+                        opacity: 0
+                    to
+                        left: 10px
+                        opacity: 1
+
+                @keyframes fadeout
+                    from
+                        left: 10px
+                        opacity: 1
+                    to
+                        left: 0
+                        opacity: 0
+
+@media (max-width: 768px)
+    html
+        body
+            main
+                min-height: calc(100% - 150px)
+                .table
+                    .row
+                        &--header
+                            height: 22px
+
+                        .cell
+                            &-product
+                                &--header
+                                    font-size: 11px
+                                    margin-left: 8px
+
+                                &-details
+                                    &__title
+                                        font-size: 11px
+
+                                    &__price
+                                        font-size: 10px
+
+                                    &__remove
+                                        font-size: 10px
+
+                            &-quantity
+                                &--header
+                                    font-size: 11px
+
+                                &-input
+                                    width: 60px
+                                    height: 18px
+
+                                    &__button
+                                        font-size: 8px
+
+                            &-subtotal
+                                &--header
+                                    font-size: 11px
+                                    margin-right: 8px
+
+                                &__text
+                                    font-size: 11px
+
+                            &__line
+                                height: 3px
+
+                            &-label
+                                &__text
+                                    font-size: 11px
+
+                            &__button
+                                width: 170px
+                                height: 30px
+                                font-size: 10px
+
+                .img
+                    width: 75px
+                    height: 75px
+                    margin: 5px 0 5px 0
+
+                .snackbar
+                    width: 160px
+                    height: 23px
+                    font-size: 9px
+
+@media (max-width: 576px)
+    html
+        body
+            main
+                min-height: calc(100% - 140px)
+                .table
+                    h3
+                        font-size: 10px
+                    .row
+                        &--header
+                            height: 20px
+
+                        .cell
+                            &-product
+                                &--header
+                                    font-size: 10px
+                                    margin-left: 5px
+
+                                &-details
+                                    &__title
+                                        font-size: 10px
+
+                                    &__price
+                                        font-size: 8px
+
+                                    &__remove
+                                        font-size: 8px
+
+                            &-quantity
+                                &--header
+                                    font-size: 10px
+
+                                &-input
+                                    width: 40px
+                                    height: 15px
+
+                                input[type="number"]
+                                    font-size: 7px
+
+                            &-subtotal
+                                width: 80px
+
+                                &--header
+                                    font-size: 10px
+                                    margin-right: 5px
+
+                                &__text
+                                    font-size: 9px
+                                    margin-right: 7px
+
+                            &__line
+                                width: calc((100% / 2) + 43px)
+                                height: 3px
+
+                            &-label
+                                &__text
+                                    font-size: 9px
+
+                            &__button
+                                width: 100px
+                                height: 22px
+                                font-size: 7px
+                                letter-spacing: 0
+
+                .img
+                    width: 60px
+                    height: 60px
+                    margin: 5px 0 5px 0
+
+                .snackbar
+                    width: 120px
+                    height: 16px
+                    font-size: 7px
+                    padding: 10px
+
+@media (max-width: 414px)
+    html
+        body
+            main
+                .table
+                    width: 90%
+
+                    h3
+                        font-size: 8px
+
+                    .row
+                        &--header
+                            height: 18px
+
+                        .cell
+                            &-product
+                                &--header
+                                    font-size: 8px
+                                    margin-left: 5px
+
+                                &-details
+                                    &__title
+                                        font-size: 9px
+                                        margin-left: 2px
+
+                                    &__price
+                                        font-size: 8px
+                                        margin-left: 2px
+
+                                    &__remove
+                                        font-size: 8px
+                                        margin-left: 2px
+
+                            &-quantity
+                                &--header
+                                    font-size: 8px
+
+                                &-input
+                                    width: 35px
+                                    height: 13px
+
+                                input[type="number"]
+                                    font-size: 6px
+
+                                &__button
+                                    font-size: 6px
+
+                            &-subtotal
+
+                                &--header
+                                    font-size: 8px
+                                    margin-right: 5px
+
+                                &__text
+                                    font-size: 8px
+                                    margin-right: 3px
+
+                            &__line
+                                height: 2px
+
+                            &-label
+                                &__text
+                                    font-size: 8px
+
+                            &__button
+                                width: 90px
+                                height: 20px
+                                font-size: 7px
+                                letter-spacing: 0
+
+                .img
+                    width: 50px
+                    height: 50px
+                    margin: 5px 0 5px 0
+
+@media (max-height: 400px)
+    html
+        body
+            main
+                .table
+                    .empty-cart
+                        height: 150px
