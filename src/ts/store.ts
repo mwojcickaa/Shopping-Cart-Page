@@ -1,21 +1,21 @@
 let arr = [
     {
         id: 1,
-        title: "1",
-        price: "5",
+        title: "Cropped t-shirt",
+        price: "9",
         image: "./src/img/product-tshirt-top.jpg"
     },
     {
         id: 2,
-        title: "2",
-        price: "10",
-        image: "./src/img/product-tshirt-top.jpg"
+        title: "Flat cork sandals",
+        price: "29",
+        image: "./src/img/product-shoes-sandals.jpg"
     },
     {
         id: 3,
-        title: "3",
-        price: "30",
-        image: "./src/img/product-tshirt-top.jpg"
+        title: "Blue denim shorts",
+        price: "34",
+        image: "./src/img/product-trousers-jeans.jpg"
     }
 ];
 
@@ -32,10 +32,13 @@ let quantityArr = [
         id: 3,
         quantity: 1
     }
-]
+];
 
+let loading = "Loading";
 
 let tbody = document.querySelector("tbody");
+
+let body = document.querySelector("body");
 
 function insertItemsFromArr() {
     tbody.innerHTML = "";
@@ -102,7 +105,7 @@ function insertItemsFromArr() {
                 tbody.innerHTML = "";
                 calculateTotalOrder()
                 tbody.insertAdjacentHTML("beforeend", `
-                    <tr style="height: 350px">
+                    <tr class="empty-cart">
                         <td colspan="5" style="text-align:center">
                             <h3>Your shopping cart is empty</h3>
                         </td>
